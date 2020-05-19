@@ -1,5 +1,5 @@
 # QTScanner
-twaindsm qt scanner
+twaindsm qt scanner for linux
 
 not yet fully working but compiles
 
