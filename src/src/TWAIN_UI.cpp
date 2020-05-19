@@ -447,10 +447,10 @@ void CTWAIN_UI::TW_GetAllProfiles(lstString& strFileNames)
   // Set current directory to profiles directory 
   DIR *dir;
   dirent *dirInfo;
-  if((dir  = opendir(m_strProfilesDirectory.c_str())) == NULL)
-  {
+///  if((dir  = opendir(m_strProfilesDirectory.c_str())) == NULL)
+///  {
     return;
-  }
+///  }
   TW_CUSTOMDSDATA DSDataBackUp;
   if(m_pDS->GetGustomDSData(&DSDataBackUp)!=TWRC_SUCCESS)
   {

@@ -57,11 +57,8 @@ HEADERS += ../../common/Common.h \
     TWAINContainerBool.h \
     QT_UI.h \
     Qt_MainForm.h \
-    Qt_About.h \
     Qt_ProfileName.h \
     ui_MainForm.h \
-    Qt_About.h \
-    ui_About.h \
     mainwindow.h
 
 CONFIG += warn_on \
@@ -72,6 +69,5 @@ CONFIG += warn_on \
 QMAKE_LIBS_QT = 
 QMAKE_LIBS_QT_THREAD = 
 FORMS += MainForm.ui \
-    mainwindow.ui \
-    About.ui
+    mainwindow.ui
 RESOURCES += qtresources.qrc
