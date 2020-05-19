@@ -9,6 +9,7 @@
 #include "CommonDS.h"
 #include "QT_UI.h"
 #include "Qt_MainForm.h"
+#include "TWAIN_UI.h"
 
 class I : public QThread
 {
@@ -29,10 +30,10 @@ int main(int argc, char *argv[])
 
   //      QPixmap m("./Resource/qtcoin.png");
 
-
+   QT_UI *m_pUI;
     MainWindow w;
 //CTWAIN_UI test();
-  MainForm *m_pDlg;
+  MainForm m_pDlg(   m_pUI);
      TW_USERINTERFACE m_Data;
 
     if(m_Data.ShowUI)
@@ -40,8 +41,8 @@ int main(int argc, char *argv[])
 //      m_pDlg = new MainForm(p_pDlg);
 //      m_pDlg->show();
 //      m_pApp->exec();
-        m_pDlg->show();
-        m_pDlg->exec();
+        m_pDlg.show();
+        m_pDlg.exec();
     }
 
 //test.DisplayTWAINGUI (TW_USERINTERFACE &twUI);
