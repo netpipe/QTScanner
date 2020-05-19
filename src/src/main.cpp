@@ -2,33 +2,21 @@
 #include <QT_UI.h>
 #include <QApplication>
 #include <QSplashScreen>
-//#include "src/qstylesheetmanager.h"
 #include <QThread>
 #include <QDebug>
-//https://github.com/ganquan0910/qt5-sqlite-connection-example
 #include "CommonDS.h"
 #include "QT_UI.h"
 #include "Qt_MainForm.h"
 #include "TWAIN_UI.h"
-
-class I : public QThread
-{
-public:
-    static void sleep(unsigned long secs) { QThread::sleep(secs); }
-};
 
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
- //   QStyleSheetManager::loadStyleSheet("style4.qss");
-//    QFile file("style4.qss");    // Modified by RCU 2016.07.17
-//    file.open(QFile::ReadOnly);
-//    QString styleSheet = QLatin1String(file.readAll());
+    //just guessing how this looks from void UIThread::run() in QT_UI
+    // also i commented out line 450 in twain_ui.cpp  void CTWAIN_UI::TW_GetAllProfiles(lstString& strFileNames)
 
-
-  //      QPixmap m("./Resource/qtcoin.png");
 
    QT_UI *m_pUI;
     MainWindow w;
@@ -38,21 +26,10 @@ int main(int argc, char *argv[])
 
     if(m_Data.ShowUI)
     {
-//      m_pDlg = new MainForm(p_pDlg);
-//      m_pDlg->show();
-//      m_pApp->exec();
         m_pDlg.show();
         m_pDlg.exec();
     }
 
-//test.DisplayTWAINGUI (TW_USERINTERFACE &twUI);
-//test.show();
-  //  QSplashScreen splash(m);
- //   splash.show();
-
- //   splash.finish(&w);
-    //     QThread::sleep(10);
-  //  I::sleep(2); // splash is shown for 5 seconds
     w.show();
 
     return a.exec();

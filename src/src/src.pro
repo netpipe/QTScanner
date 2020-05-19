@@ -63,8 +63,9 @@ HEADERS += ../../common/Common.h \
 
 CONFIG += warn_on \
     debug \
-    x86 ppc TWH_CMP_GNU
+    x86 ppc
 
+DEFINES += UNIX TWH_CMP_GNU
 # this project doesn't need any QT libs.
 QMAKE_LIBS_QT = 
 QMAKE_LIBS_QT_THREAD = 
