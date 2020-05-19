@@ -447,11 +447,11 @@ void CTWAIN_UI::TW_GetAllProfiles(lstString& strFileNames)
   // Set current directory to profiles directory 
   DIR *dir;
   dirent *dirInfo;
-  /// todo , disabled for debugging + could not find any profiles TWAINDS_Sample[32|64].ds might be only for cameras it looks for dsp files though.
-///  if((dir  = opendir(m_strProfilesDirectory.c_str())) == NULL)
-///  {
+ // todo , disabled for debugging + could not find any profiles TWAINDS_Sample[32|64].ds might be only for cameras it looks for dsp files though.
+ /// if((dir  = opendir(m_strProfilesDirectory.c_str())) == NULL)
+ /// {
     return;
-///  }
+ /// }
   TW_CUSTOMDSDATA DSDataBackUp;
   if(m_pDS->GetGustomDSData(&DSDataBackUp)!=TWRC_SUCCESS)
   {

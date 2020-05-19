@@ -1,17 +1,31 @@
 QT       += core gui network opengl widgets
 
+unix {
+ #   TEMPLATE = lib
+    VERSION = 1.0
+    DEFINES += UNIX
+}
+
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 CONFIG += cpp11
 QMAKE_CXXFLAGS += -std=c++11
 
 PROJECT_FILE_NAME = TWAINDS_FreeImage
-TARGET = test
+TARGET = $$PROJECT_FILE_NAME
 LIBS += -lfreeimage -ldl -lX11 -lc
 
 # TWAIN datasources end with a .ds instead of .so
 
-INSTALLS += ds
-QMAKE_CLEAN = $${PROJECT_FILE_NAME}.ds
+#QMAKE_POST_LINK = cp \
+ #   $(TARGET) \
+#    $${PROJECT_FILE_NAME}.ds
+#ds.path = /usr/local/lib/twain/sample01
+#ds.files = $${PROJECT_FILE_NAME}.ds \
+#    TWAIN_logo.png
+
+#INSTALLS += ds
+
+QMAKE_CLEAN = $${PROJECT_FILE_NAME}
 INCLUDEPATH = /usr/local/include \
     ../../pub/external/include \
     ../../pub/include \
@@ -36,8 +50,8 @@ SOURCES += ../../common/CTiffWriter.cpp \
     Qt_MainForm.cpp \
     Qt_ProfileName.cpp \
     Qt_About.cpp \
-    main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    main.cpp
 HEADERS += ../../common/Common.h \
     ../../common/CommonTWAIN.h \
     ../../common/CTiffWriter.h \
@@ -59,6 +73,7 @@ HEADERS += ../../common/Common.h \
     Qt_MainForm.h \
     Qt_ProfileName.h \
     ui_MainForm.h \
+    mainwindow.h \
     mainwindow.h
 
 CONFIG += warn_on \
@@ -70,5 +85,6 @@ DEFINES += UNIX TWH_CMP_GNU
 QMAKE_LIBS_QT = 
 QMAKE_LIBS_QT_THREAD = 
 FORMS += MainForm.ui \
+    mainwindow.ui \
     mainwindow.ui
 RESOURCES += qtresources.qrc

@@ -15,8 +15,9 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
 
     //just guessing how this looks from void UIThread::run() in QT_UI
-    // also i commented out line 450 in twain_ui.cpp  void CTWAIN_UI::TW_GetAllProfiles(lstString& strFileNames)
+    // also i commented out line 450 in twain_ui.cpp  void CTWAIN_UI::TW_GetAllProfiles(lstString& strFileNames)  for more debug info
 
+    //looks like it needs to compile ds file instead of running like i am
 
    QT_UI *m_pUI;
     MainWindow w;
