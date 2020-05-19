@@ -7,22 +7,22 @@
 #include <QDialog>
 #include <QWidget>
 
-namespace Ui {
-    class About;
-}
+//namespace Ui {
+//    class About;
+//}
 
-class About : public QDialog {
-    Q_OBJECT
-    Q_DISABLE_COPY(About)
-public:
-    explicit About(QWidget *parent = 0);
-    virtual ~About();
+//class About : public QDialog {
+//    Q_OBJECT
+//    Q_DISABLE_COPY(About)
+//public:
+//    explicit About(QWidget *parent = 0);
+//    virtual ~About();
 
-protected:
-    virtual void changeEvent(QEvent *e);
+//protected:
+//    virtual void changeEvent(QEvent *e);
 
-private:
-    Ui::About *m_ui;
-};
+//private:
+//    Ui::About *m_ui;
+//};
 
 #endif // QT_ABOUT_H

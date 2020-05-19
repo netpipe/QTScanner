@@ -335,9 +335,9 @@ void MainForm::on_pPushButton_Help_clicked(bool _bChecked)
 
 void MainForm::on_pPushButton_About_clicked(bool _bChecked)
 {
-  About dlg;
-  dlg.exec();
-  return;
+//  About dlg;
+//  dlg.exec();
+//  return;
 }
 
 void MainForm::UpdateControls()

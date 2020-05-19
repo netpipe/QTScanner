@@ -25,10 +25,6 @@
   <property name="windowTitle">
    <string>About</string>
   </property>
-  <property name="windowIcon">
-   <iconset resource="qtresources.qrc">
-    <normaloff>:/images/TWG-LogoSmall.png</normaloff>:/images/TWG-LogoSmall.png</iconset>
-  </property>
   <widget class="QLabel" name="pLabel_QtGraphic">
    <property name="geometry">
     <rect>
