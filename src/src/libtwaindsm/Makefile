@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/netpipe/desktops/5/work/twain-dsm/TWAIN_DSM/src
+CMAKE_SOURCE_DIR = /home/netpipe/qtprojects/QTScanner/src/src/libtwaindsm
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/netpipe/desktops/5/work/twain-dsm/TWAIN_DSM/src
+CMAKE_BINARY_DIR = /home/netpipe/qtprojects/QTScanner/src/src/libtwaindsm
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,9 +126,9 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/netpipe/desktops/5/work/twain-dsm/TWAIN_DSM/src/CMakeFiles /home/netpipe/desktops/5/work/twain-dsm/TWAIN_DSM/src/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/netpipe/qtprojects/QTScanner/src/src/libtwaindsm/CMakeFiles /home/netpipe/qtprojects/QTScanner/src/src/libtwaindsm/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/netpipe/desktops/5/work/twain-dsm/TWAIN_DSM/src/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/netpipe/qtprojects/QTScanner/src/src/libtwaindsm/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

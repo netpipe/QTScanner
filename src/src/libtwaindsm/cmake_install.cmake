@@ -1,4 +1,4 @@
-# Install script for directory: /home/netpipe/desktops/5/work/twain-dsm/TWAIN_DSM/src
+# Install script for directory: /home/netpipe/qtprojects/QTScanner/src/src/libtwaindsm
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,7 +38,7 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES "/home/netpipe/desktops/5/work/twain-dsm/TWAIN_DSM/src/twain.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES "/home/netpipe/qtprojects/QTScanner/src/src/libtwaindsm/twain.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -55,9 +55,9 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     endif()
   endforeach()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE FILES
-    "/home/netpipe/desktops/5/work/twain-dsm/TWAIN_DSM/src/libtwaindsm.so.2.4.2"
-    "/home/netpipe/desktops/5/work/twain-dsm/TWAIN_DSM/src/libtwaindsm.so.2"
-    "/home/netpipe/desktops/5/work/twain-dsm/TWAIN_DSM/src/libtwaindsm.so"
+    "/home/netpipe/qtprojects/QTScanner/src/src/libtwaindsm/libtwaindsm.so.2.4.2"
+    "/home/netpipe/qtprojects/QTScanner/src/src/libtwaindsm/libtwaindsm.so.2"
+    "/home/netpipe/qtprojects/QTScanner/src/src/libtwaindsm/libtwaindsm.so"
     )
   foreach(file
       "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libtwaindsm.so.2.4.2"
@@ -81,5 +81,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/netpipe/desktops/5/work/twain-dsm/TWAIN_DSM/src/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/netpipe/qtprojects/QTScanner/src/src/libtwaindsm/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

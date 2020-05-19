@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/netpipe/desktops/5/work/twain-dsm/TWAIN_DSM/src/apps.cpp
+/home/netpipe/qtprojects/QTScanner/src/src/libtwaindsm/apps.cpp
 dsm.h
-/home/netpipe/desktops/5/work/twain-dsm/TWAIN_DSM/src/dsm.h
+/home/netpipe/qtprojects/QTScanner/src/src/libtwaindsm/dsm.h
 
-/home/netpipe/desktops/5/work/twain-dsm/TWAIN_DSM/src/dsm.cpp
+/home/netpipe/qtprojects/QTScanner/src/src/libtwaindsm/dsm.cpp
 dsm.h
-/home/netpipe/desktops/5/work/twain-dsm/TWAIN_DSM/src/dsm.h
+/home/netpipe/qtprojects/QTScanner/src/src/libtwaindsm/dsm.h
 
-/home/netpipe/desktops/5/work/twain-dsm/TWAIN_DSM/src/dsm.h
+/home/netpipe/qtprojects/QTScanner/src/src/libtwaindsm/dsm.h
 windows.h
 -
 direct.h
@@ -38,7 +38,7 @@ sys/syscall.h
 sys/time.h
 -
 resource.h
-/home/netpipe/desktops/5/work/twain-dsm/TWAIN_DSM/src/resource.h
+/home/netpipe/qtprojects/QTScanner/src/src/libtwaindsm/resource.h
 stdio.h
 -
 assert.h
@@ -52,15 +52,15 @@ sys/types.h
 stdlib.h
 -
 twain.h
-/home/netpipe/desktops/5/work/twain-dsm/TWAIN_DSM/src/twain.h
+/home/netpipe/qtprojects/QTScanner/src/src/libtwaindsm/twain.h
 
-/home/netpipe/desktops/5/work/twain-dsm/TWAIN_DSM/src/log.cpp
+/home/netpipe/qtprojects/QTScanner/src/src/libtwaindsm/log.cpp
 dsm.h
-/home/netpipe/desktops/5/work/twain-dsm/TWAIN_DSM/src/dsm.h
+/home/netpipe/qtprojects/QTScanner/src/src/libtwaindsm/dsm.h
 
-/home/netpipe/desktops/5/work/twain-dsm/TWAIN_DSM/src/resource.h
+/home/netpipe/qtprojects/QTScanner/src/src/libtwaindsm/resource.h
 
-/home/netpipe/desktops/5/work/twain-dsm/TWAIN_DSM/src/twain.h
+/home/netpipe/qtprojects/QTScanner/src/src/libtwaindsm/twain.h
 Carbon.h
 -
 Carbon/Carbon.h
