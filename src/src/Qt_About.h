@@ -5,6 +5,7 @@
 #include <QtCore>
 #include <QtGui>
 #include <QDialog>
+#include <QWidget>
 
 namespace Ui {
     class About;

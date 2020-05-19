@@ -18,7 +18,7 @@ public:
     QString GetProfileName();
 protected:
 
-//    virtual void changeEvent(QEvent *e);
+    virtual void changeEvent(QEvent *e);
 
 private:
     Ui::ProfileName *m_ui;
