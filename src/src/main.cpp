@@ -37,9 +37,11 @@ int main(int argc, char *argv[])
 
     if(m_Data.ShowUI)
     {
-      m_pDlg = new MainForm(p_pDlg);
-      m_pDlg->show();
-      m_pApp->exec();
+//      m_pDlg = new MainForm(p_pDlg);
+//      m_pDlg->show();
+//      m_pApp->exec();
+        m_pDlg->show();
+        m_pDlg->exec();
     }
 
 //test.DisplayTWAINGUI (TW_USERINTERFACE &twUI);
