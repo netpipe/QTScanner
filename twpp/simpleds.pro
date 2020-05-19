@@ -12,7 +12,9 @@ TARGET = simpleds
 
 CONFIG += c++11
 DEFINES += TWPP_IS_DS
+unix:DEFINES += TWPP_DETAIL_OS_LINUX
 INCLUDEPATH += $$PWD/../../
+LIBS=-ldl
 
 DEF_FILE = exports.def
 

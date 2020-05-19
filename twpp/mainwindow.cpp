@@ -2,9 +2,12 @@
 #include "ui_mainwindow.h"
 #include <twpp.hpp>
 #include <scandialog.hpp>
-#include "twglue.hpp"
 #include <twpp/application.hpp>
+#include <QDebug>
+#include <iostream>
+#include <stdio.h>
 
+using namespace std;
 
 //open data source manager
 //open data source
@@ -12,16 +15,6 @@
 //transfer data
 //close data source
 //close data source manager
-
-//Manager mgr(
-//    Identity(
-//        Version(1, 0, Language::English, Country::UnitedKingdom, "v1.0"),
-//        DataGroup::Image,
-//        "Broke & Company",
-//        "BC Scan",
-//        "BC Soft Scan"
-//    )
-//);
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -78,6 +71,61 @@ MainWindow::MainWindow(QWidget *parent) :
 
 //   TwGlue m_glue(on_scan_clicked(),on_cancel_clicked());
 //   ScanDialog test(m_glue,this);
+
+    //https://github.com/xricht17/twpp/issues/27 sample code here
+
+    std::vector<Twpp::Source> sources;
+    Twpp::Source              defaultSource;
+    Twpp::Manager             manager {Twpp::Identity {
+            Twpp::Version {1, 0, Twpp::Language::English, Twpp::Country::UnitedKingdom, "v0.9"},
+            Twpp::DataGroup::Image,
+            "Fake Manufacturer",
+            "Fake product family",
+            "Fake product name"}};
+
+    manager.load();
+    manager.open();
+    manager.sources(sources);
+    manager.defaultSource(defaultSource);
+    if (!sources.empty()) {
+        Twpp::Source &         source {sources.front()};
+        const Twpp::Identity & identity {source.identity()};
+
+        std::cout << "product: " << identity.productName().string();
+           std::cout << " manufacturer: " << identity.manufacturer().string() << std::endl;
+        if (Twpp::success(source.open())) {
+            Twpp::Capability supported {Twpp::CapType::SupportedCaps};
+
+            if (Twpp::success(source.capability(Twpp::Msg::Get, supported))) {
+                for (const Twpp::CapType capType: supported.data<Twpp::CapType::SupportedCaps>()) {
+                    std::cout << "cap type: " << static_cast<uint16_t>(capType) << std::endl;
+
+                    // just one case now, but more to come ...
+                    switch (capType) {
+                    case Twpp::CapType::IBitDepth: {
+                        Twpp::Cap<Twpp::CapType::IBitDepth> bitDepth;
+
+                        if (Twpp::success(source.capability(Twpp::Msg::Get, bitDepth))) {
+                            std::cout << "current bitDepth: " << bitDepth.currentItem()
+                                      << std::endl;
+                        }
+                        break;
+                    }
+                    default:
+                        break;
+                    }
+                }
+            } else {
+                std::cerr << "DataSource does not return capabilities";
+            }
+        } else {
+            std::cerr << "TWAIN DataSource does not open" << std::endl;
+        }
+    } else {
+        std::cerr << "No TWAIN data sources" << std::endl;
+    }
+
+
 
 }
 
