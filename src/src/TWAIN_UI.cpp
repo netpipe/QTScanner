@@ -457,7 +457,7 @@ void CTWAIN_UI::TW_GetAllProfiles(lstString& strFileNames)
     return ;
   }
 
-  while(dirInfo=readdir(dir)) 
+  while(dirInfo=readdir(dir))
   {
     string strName = dirInfo->d_name;
     if(strName.size()>strlen(FILEEXTENTION) && strName.substr(strName.size()-strlen(FILEEXTENTION),strlen(FILEEXTENTION))==FILEEXTENTION)

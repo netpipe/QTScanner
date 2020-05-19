@@ -46,39 +46,39 @@ MainForm::~MainForm()
 // Profile buttons
 void MainForm::on_pPushButton_Profile_Save_clicked(bool _bChecked)
 {
-//  ProfileName dlg;
-//  int nRes = dlg.exec();
-//  if(nRes)
-//  {
-//    QString strName = dlg.GetProfileName();
-//    int nItem = ui->pComboBox_Profiles->findText(strName);
-//    if(nItem>=0)
-//    {
-//      QMessageBox msgBox(QMessageBox::Critical,
-//      QApplication::translate("MainForm", "Error", 0),
-//      QApplication::translate("MainForm", "Profile already exist. Do you want to overwrite it?", 0),
-//      QMessageBox::Yes|QMessageBox::Cancel);
-//      if(msgBox.exec() == QMessageBox::Cancel)
-//      {
-//        return;
-//      }
-//    }
+  ProfileName dlg;
+  int nRes = dlg.exec();
+  if(nRes)
+  {
+    QString strName = dlg.GetProfileName();
+    int nItem = ui->pComboBox_Profiles->findText(strName);
+    if(nItem>=0)
+    {
+      QMessageBox msgBox(QMessageBox::Critical,
+      QApplication::translate("MainForm", "Error", 0),
+      QApplication::translate("MainForm", "Profile already exist. Do you want to overwrite it?", 0),
+      QMessageBox::Yes|QMessageBox::Cancel);
+      if(msgBox.exec() == QMessageBox::Cancel)
+      {
+        return;
+      }
+    }
 
-//    string strProfile = strName.toStdString();
+    string strProfile = strName.toStdString();
 
-//    if(m_pUI->TW_SaveProfileToFile(strProfile))
-//    {
-//      if(nItem<0)
-//      {
-//        ui->pComboBox_Profiles->addItem(strName);
-//        ui->pComboBox_Profiles->setCurrentIndex(ui->pComboBox_Profiles->count()-1);
-//      }
-//      else
-//      {
-//        ui->pComboBox_Profiles->setCurrentIndex(nItem);
-//      }
-//    }
-//  }
+    if(m_pUI->TW_SaveProfileToFile(strProfile))
+    {
+      if(nItem<0)
+      {
+        ui->pComboBox_Profiles->addItem(strName);
+        ui->pComboBox_Profiles->setCurrentIndex(ui->pComboBox_Profiles->count()-1);
+      }
+      else
+      {
+        ui->pComboBox_Profiles->setCurrentIndex(nItem);
+      }
+    }
+  }
   return;
 }
 
@@ -100,10 +100,10 @@ void MainForm::on_pPushButton_Profile_Load_clicked(bool _bChecked)
 void MainForm::on_pPushButton_Profile_Delete_clicked(bool _bChecked)
 {
   string strProfile = ui->pComboBox_Profiles->currentText().toStdString();
-  if(m_pUI->TW_DeleteProfile(strProfile))
-  {
-    ui->pComboBox_Profiles->removeItem(ui->pComboBox_Profiles->currentIndex());
-  }
+//  if(m_pUI->TW_DeleteProfile(strProfile))
+//  {
+//    ui->pComboBox_Profiles->removeItem(ui->pComboBox_Profiles->currentIndex());
+//  }
   return;
 }
 
@@ -335,8 +335,8 @@ void MainForm::on_pPushButton_Help_clicked(bool _bChecked)
 
 void MainForm::on_pPushButton_About_clicked(bool _bChecked)
 {
-//  About dlg;
-//  dlg.exec();
+  About dlg;
+  dlg.exec();
   return;
 }
 

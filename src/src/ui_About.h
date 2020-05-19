@@ -16,7 +16,7 @@
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
-
+#include <QWidget>
 QT_BEGIN_NAMESPACE
 
 class Ui_About

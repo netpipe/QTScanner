@@ -72,5 +72,6 @@ CONFIG += warn_on \
 QMAKE_LIBS_QT = 
 QMAKE_LIBS_QT_THREAD = 
 FORMS += MainForm.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    About.ui
 RESOURCES += qtresources.qrc
