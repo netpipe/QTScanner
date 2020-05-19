@@ -6,6 +6,9 @@
 #include <QThread>
 #include <QDebug>
 //https://github.com/ganquan0910/qt5-sqlite-connection-example
+#include "CommonDS.h"
+#include "QT_UI.h"
+#include "Qt_MainForm.h"
 
 class I : public QThread
 {
@@ -28,7 +31,16 @@ int main(int argc, char *argv[])
 
 
     MainWindow w;
-CTWAIN_UI test();
+//CTWAIN_UI test();
+  MainForm *m_pDlg;
+     TW_USERINTERFACE m_Data;
+
+    if(m_Data.ShowUI)
+    {
+      m_pDlg = new MainForm(p_pDlg);
+      m_pDlg->show();
+      m_pApp->exec();
+    }
 
 //test.DisplayTWAINGUI (TW_USERINTERFACE &twUI);
 //test.show();
