@@ -1,0 +1,7 @@
+/home/netpipe/desktops/5/work/twain-dsm/TWAIN_DSM/src/CMakeFiles/install/strip.dir
+/home/netpipe/desktops/5/work/twain-dsm/TWAIN_DSM/src/CMakeFiles/edit_cache.dir
+/home/netpipe/desktops/5/work/twain-dsm/TWAIN_DSM/src/CMakeFiles/twaindsm.dir
+/home/netpipe/desktops/5/work/twain-dsm/TWAIN_DSM/src/CMakeFiles/list_install_components.dir
+/home/netpipe/desktops/5/work/twain-dsm/TWAIN_DSM/src/CMakeFiles/install/local.dir
+/home/netpipe/desktops/5/work/twain-dsm/TWAIN_DSM/src/CMakeFiles/rebuild_cache.dir
+/home/netpipe/desktops/5/work/twain-dsm/TWAIN_DSM/src/CMakeFiles/install.dir

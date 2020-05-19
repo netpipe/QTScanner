@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC   -shared -Wl,-soname,libtwaindsm.so.2 -o libtwaindsm.so.2.4.2 CMakeFiles/twaindsm.dir/dsm.o CMakeFiles/twaindsm.dir/apps.o CMakeFiles/twaindsm.dir/log.o -ldl 
