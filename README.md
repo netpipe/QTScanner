@@ -7,4 +7,4 @@ compile libtwaindsm twaindsm.so and place into ../../src  and into ../../src/con
 
 consolesample is working
 
-
+twpp is seperate project
